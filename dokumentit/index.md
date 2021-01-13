@@ -1,4 +1,4 @@
-# Tervetuloa projektin kotisivuille!
+# Tervetuloa projektin sivuille
 
 Tämä on demoprojekti, joka liittyy TTOS0800 + TTOS0900 - Ohjelmistoprojekti ja järjestelmätestaus -kurssiin. Tekijä on Anna Matela (N2970).
 
