@@ -1,8 +1,8 @@
-# Welcome to Project GameDev landing page!
+# Tervetuloa projektin kotisivuille!
 
-This is demo project page for TTOS0800 + TTOS0900 - Ohjelmistoprojekti ja järjestelmätestaus, hosted by Anna Matela (N2970).
+Tämä on demoprojekti, joka liittyy TTOS0800 + TTOS0900 - Ohjelmistoprojekti ja järjestelmätestaus -kurssiin. Tekijä on Anna Matela (N2970).
 
-## Help and info
+## Apua ja neuvoja
 
 * Kotisivut löytyvät [täältä](http://open-project-framework.pages.labranet.jamk.fi/)
 
