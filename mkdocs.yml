@@ -1,7 +1,7 @@
-site_name: OPF-Default-Rel 0.9.1
+site_name: Project X -kotisivut
 site_url: http://jamkit.pages.labranet.jamk.fi/project-templates/opf-core-template-v2
-site_description: Default Description
-site_author: Firstname Lastname / JAMK IT
+site_description: Projekti X:n kotisivut
+site_author: Anna Matela / JAMK IT
 
 docs_dir: dokumentit
 site_dir: public
