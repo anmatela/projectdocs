@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210322 12:48:22.718" rpa="false" schemaversion="2">
+<suite id="s1" name="RobotFramework" source="D:\RobotFramework">
+<suite id="s1-s1" name="Tests" source="D:\RobotFramework\tests.robot">
+<kw name="Open Browser To Front Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${FRONTPAGE URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:48:22.912" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!'.</msg>
+<status status="PASS" starttime="20210322 12:48:22.912" endtime="20210322 12:48:25.615"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:48:25.616" endtime="20210322 12:48:25.738"/>
+</kw>
+<kw name="Front Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${FRONTPAGE URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:48:25.743" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!'.</msg>
+<status status="PASS" starttime="20210322 12:48:25.738" endtime="20210322 12:48:25.743"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:25.738" endtime="20210322 12:48:25.743"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:22.911" endtime="20210322 12:48:25.743"/>
+</kw>
+<test id="s1-s1-t1" name="Valid Login">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:48:25.744" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!login'.</msg>
+<status status="PASS" starttime="20210322 12:48:25.744" endtime="20210322 12:48:30.337"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:48:30.338" endtime="20210322 12:48:30.460"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:48:30.473" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:48:30.461" endtime="20210322 12:48:30.473"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:30.460" endtime="20210322 12:48:30.473"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:25.744" endtime="20210322 12:48:30.473"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:48:30.474" level="INFO">Typing text 'anmatela@gmail.com' into text field 'css=[placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20210322 12:48:30.474" endtime="20210322 12:48:30.578"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:30.474" endtime="20210322 12:48:30.578"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[type="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:48:30.579" level="INFO">Typing text 'annatestaa' into text field 'css=[type="password"]'.</msg>
+<status status="PASS" starttime="20210322 12:48:30.579" endtime="20210322 12:48:30.665"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:30.579" endtime="20210322 12:48:30.665"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210322 12:48:30.666" level="INFO">Clicking button 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:48:30.666" endtime="20210322 12:48:30.715"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210322 12:48:30.716" endtime="20210322 12:48:30.716"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:30.666" endtime="20210322 12:48:30.716"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>annam</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:48:34.742" level="INFO">Current page contains text 'annam'.</msg>
+<status status="PASS" starttime="20210322 12:48:30.717" endtime="20210322 12:48:34.742"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${WELCOME URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:48:36.751" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!home/personal'.</msg>
+<status status="PASS" starttime="20210322 12:48:34.742" endtime="20210322 12:48:36.751"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:30.716" endtime="20210322 12:48:36.751"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:48:36.752" endtime="20210322 12:48:40.816"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:25.743" endtime="20210322 12:48:40.817"/>
+</test>
+<test id="s1-s1-t2" name="Invalid Username">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:48:40.820" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!login'.</msg>
+<status status="PASS" starttime="20210322 12:48:40.819" endtime="20210322 12:48:45.291"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:48:45.291" endtime="20210322 12:48:47.419"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:48:51.442" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:48:47.420" endtime="20210322 12:48:51.442"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:47.419" endtime="20210322 12:48:51.442"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:40.819" endtime="20210322 12:48:51.442"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>invalid@gmail.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:48:51.443" level="INFO">Typing text 'invalid@gmail.com' into text field 'css=[placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20210322 12:48:51.443" endtime="20210322 12:48:57.573"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:51.443" endtime="20210322 12:48:57.573"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[type="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:48:57.575" level="INFO">Typing text 'annatestaa' into text field 'css=[type="password"]'.</msg>
+<status status="PASS" starttime="20210322 12:48:57.575" endtime="20210322 12:49:03.687"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:57.574" endtime="20210322 12:49:03.687"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210322 12:49:03.688" level="INFO">Clicking button 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:49:03.688" endtime="20210322 12:49:13.780"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210322 12:49:13.780" endtime="20210322 12:49:13.780"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:03.687" endtime="20210322 12:49:13.780"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:49:17.803" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:49:13.781" endtime="20210322 12:49:17.803"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:13.781" endtime="20210322 12:49:17.803"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:13.781" endtime="20210322 12:49:17.804"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:49:17.805" endtime="20210322 12:49:21.875"/>
+</kw>
+<status status="PASS" starttime="20210322 12:48:40.819" endtime="20210322 12:49:21.875"/>
+</test>
+<test id="s1-s1-t3" name="Invalid Password">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:49:21.878" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!login'.</msg>
+<status status="PASS" starttime="20210322 12:49:21.878" endtime="20210322 12:49:26.482"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:49:26.482" endtime="20210322 12:49:28.612"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:49:32.652" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:49:28.612" endtime="20210322 12:49:32.652"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:28.612" endtime="20210322 12:49:32.652"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:21.878" endtime="20210322 12:49:32.652"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:49:32.654" level="INFO">Typing text 'anmatela@gmail.com' into text field 'css=[placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20210322 12:49:32.653" endtime="20210322 12:49:38.774"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:32.653" endtime="20210322 12:49:38.774"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>Invalid</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[type="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:49:38.775" level="INFO">Typing text 'Invalid' into text field 'css=[type="password"]'.</msg>
+<status status="PASS" starttime="20210322 12:49:38.775" endtime="20210322 12:49:44.877"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:38.775" endtime="20210322 12:49:44.877"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210322 12:49:44.878" level="INFO">Clicking button 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:49:44.878" endtime="20210322 12:49:54.984"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210322 12:49:54.984" endtime="20210322 12:49:54.984"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:44.878" endtime="20210322 12:49:54.984"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:49:59.001" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:49:54.986" endtime="20210322 12:49:59.001"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:54.985" endtime="20210322 12:49:59.001"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:54.985" endtime="20210322 12:49:59.001"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:49:59.002" endtime="20210322 12:50:03.065"/>
+</kw>
+<status status="PASS" starttime="20210322 12:49:21.877" endtime="20210322 12:50:03.065"/>
+</test>
+<test id="s1-s1-t4" name="Valid Logout">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:50:03.067" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!login'.</msg>
+<status status="PASS" starttime="20210322 12:50:03.067" endtime="20210322 12:50:07.541"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:50:07.541" endtime="20210322 12:50:09.679"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:50:13.709" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:50:09.680" endtime="20210322 12:50:13.709"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:09.679" endtime="20210322 12:50:13.709"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:03.067" endtime="20210322 12:50:13.709"/>
+</kw>
+<kw name="Valid Login">
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:50:13.711" level="INFO">Typing text 'anmatela@gmail.com' into text field 'css=[placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20210322 12:50:13.711" endtime="20210322 12:50:19.861"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:13.710" endtime="20210322 12:50:19.861"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[type="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:50:19.862" level="INFO">Typing text 'annatestaa' into text field 'css=[type="password"]'.</msg>
+<status status="PASS" starttime="20210322 12:50:19.862" endtime="20210322 12:50:25.981"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:19.861" endtime="20210322 12:50:25.981"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210322 12:50:25.981" level="INFO">Clicking button 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:50:25.981" endtime="20210322 12:50:36.095"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210322 12:50:36.095" endtime="20210322 12:50:36.096"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:25.981" endtime="20210322 12:50:36.096"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>annam</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:50:40.127" level="INFO">Current page contains text 'annam'.</msg>
+<status status="PASS" starttime="20210322 12:50:36.096" endtime="20210322 12:50:40.127"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${WELCOME URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:50:42.147" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!home/personal'.</msg>
+<status status="PASS" starttime="20210322 12:50:40.127" endtime="20210322 12:50:42.147"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:36.096" endtime="20210322 12:50:42.147"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:13.710" endtime="20210322 12:50:42.147"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[href="#!settings"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 12:50:42.148" level="INFO">Clicking element 'css=[href="#!settings"]'.</msg>
+<status status="PASS" starttime="20210322 12:50:42.148" endtime="20210322 12:50:46.230"/>
+</kw>
+<kw name="Settings Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${SETTINGS URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:50:48.252" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!settings'.</msg>
+<status status="PASS" starttime="20210322 12:50:46.231" endtime="20210322 12:50:48.252"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:46.231" endtime="20210322 12:50:48.252"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[class="btn btn-outline-danger"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 12:50:48.253" level="INFO">Clicking element 'css=[class="btn btn-outline-danger"]'.</msg>
+<status status="PASS" starttime="20210322 12:50:48.252" endtime="20210322 12:50:52.351"/>
+</kw>
+<kw name="Front Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${FRONTPAGE URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:50:54.359" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!'.</msg>
+<status status="PASS" starttime="20210322 12:50:52.352" endtime="20210322 12:50:54.359"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:52.352" endtime="20210322 12:50:54.359"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:50:54.360" endtime="20210322 12:50:58.413"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:03.066" endtime="20210322 12:50:58.414"/>
+</test>
+<test id="s1-s1-t5" name="Creating New Post Succeed">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210322 12:50:58.417" level="INFO">Opening browser 'Chrome' to base url 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!login'.</msg>
+<status status="PASS" starttime="20210322 12:50:58.416" endtime="20210322 12:51:02.860"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210322 12:51:02.860" endtime="20210322 12:51:04.995"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:51:09.020" level="INFO">Current page contains text 'Sign in'.</msg>
+<status status="PASS" starttime="20210322 12:51:04.995" endtime="20210322 12:51:09.020"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:04.995" endtime="20210322 12:51:09.020"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:58.416" endtime="20210322 12:51:09.021"/>
+</kw>
+<kw name="Valid Login">
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Email"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:09.022" level="INFO">Typing text 'anmatela@gmail.com' into text field 'css=[placeholder="Email"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:09.022" endtime="20210322 12:51:15.155"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:09.021" endtime="20210322 12:51:15.155"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[type="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:15.156" level="INFO">Typing text 'annatestaa' into text field 'css=[type="password"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:15.156" endtime="20210322 12:51:21.275"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:15.155" endtime="20210322 12:51:21.275"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:21.277" level="INFO">Clicking button 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:21.277" endtime="20210322 12:51:31.367"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210322 12:51:31.367" endtime="20210322 12:51:31.367"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:21.275" endtime="20210322 12:51:31.368"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>annam</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:51:35.388" level="INFO">Current page contains text 'annam'.</msg>
+<status status="PASS" starttime="20210322 12:51:31.368" endtime="20210322 12:51:35.388"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${WELCOME URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:51:37.396" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!home/personal'.</msg>
+<status status="PASS" starttime="20210322 12:51:35.388" endtime="20210322 12:51:37.396"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:31.368" endtime="20210322 12:51:37.396"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:09.021" endtime="20210322 12:51:37.397"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[href="#!editor/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:37.398" level="INFO">Clicking element 'css=[href="#!editor/"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:37.397" endtime="20210322 12:51:41.475"/>
+</kw>
+<kw name="Editor Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${EDITOR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210322 12:51:43.486" level="INFO">Current location is 'https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#!editor/'.</msg>
+<status status="PASS" starttime="20210322 12:51:41.476" endtime="20210322 12:51:43.486"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:41.476" endtime="20210322 12:51:43.486"/>
+</kw>
+<kw name="Add Title" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Article Title"]</arg>
+<arg>${TITLETEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:43.487" level="INFO">Typing text 'This Is Some Article Title For Testing' into text field 'css=[placeholder="Article Title"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:43.487" endtime="20210322 12:51:49.722"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:43.486" endtime="20210322 12:51:49.722"/>
+</kw>
+<kw name="Add About" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="What's this article about?"]</arg>
+<arg>${ABOUTTEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:49.722" level="INFO">Typing text 'Here is some random text for "What Is This Article About field"...' into text field 'css=[placeholder="What's this article about?"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:49.722" endtime="20210322 12:51:56.010"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:49.722" endtime="20210322 12:51:56.010"/>
+</kw>
+<kw name="Add Body" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=[placeholder="Write your article (in markdown)"]</arg>
+<arg>${BODYTEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210322 12:51:56.011" level="INFO">Typing text 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae est nisl. Ut sed dignissim erat, nec lobortis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vel eros egestas, eleifend diam sed, pharetra sapien. Etiam bibendum lacus vitae purus dignissim scelerisque. Integer non nisi condimentum, accumsan mi id, interdum tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam sit amet nibh diam. Morbi lobortis, ligula ac mattis tempor, lacus eros rutrum tellus, eget pretium eros dolor quis velit. Curabitur varius imperdiet enim, ut pellentesque sapien accumsan a. Donec vel lacinia eros. In hac habitasse platea dictumst. Suspendisse eleifend vitae odio nec posuere. Cras nec tempor purus. Nullam scelerisque, velit at commodo cursus, dolor diam sollicitudin ex, at interdum felis elit id diam. Suspendisse malesuada commodo sapien, vel facilisis tellus cursus eget. In hac habitasse platea dictumst. Morbi dictum cursus tellus, id varius neque scelerisque scelerisque. Aenean urna sapien, pulvinar nec condimentum eget, bibendum sit amet turpis. Pellentesque odio mi, vulputate nec magna sed, sodales tristique tellus. Curabitur et eleifend ante, a vulputate ex. Maecenas dignissim tortor non tortor elementum, vel egestas dui vulputate. Donec pulvinar metus elit, ac condimentum erat hendrerit eu. Pellentesque elementum neque at ultrices tristique. In hac habitasse platea dictumst. Phasellus eleifend sodales lorem, eu lacinia velit finibus quis. Sed convallis neque ac fermentum tempor. Quisque luctus lacinia scelerisque. Etiam vel accumsan purus, auctor interdum lectus. Aliquam ornare nulla ut augue auctor, in mattis purus pulvinar. Suspendisse at pulvinar diam. Phasellus id sodales arcu, a blandit augue. Pellentesque sodales turpis nunc, a varius ex tempor at. Praesent sit amet feugiat elit. Nulla at mi blandit ligula tincidunt bibendum. Ut pellentesque feugiat euismod. Curabitur dignissim urna sed ante porttitor pulvinar. Curabitur vehicula id ipsum in scelerisque. Duis consectetur, purus vel gravida ullamcorper, enim nisi gravida tellus, ac pulvinar diam risus ut neque. Integer luctus imperdiet dictum. Aliquam at lectus eu velit vulputate consectetur dictum sit amet mauris. Maecenas congue maximus arcu, sed volutpat mi porta vel. Vestibulum porttitor felis nec est ullamcorper aliquam. Integer gravida imperdiet nunc ac tincidunt. Maecenas tempus sapien imperdiet nisl aliquam, eget feugiat purus porttitor.' into text field 'css=[placeholder="Write your article (in markdown)"]'.</msg>
+<status status="PASS" starttime="20210322 12:51:56.011" endtime="20210322 12:52:05.574"/>
+</kw>
+<status status="PASS" starttime="20210322 12:51:56.011" endtime="20210322 12:52:05.574"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=[class="btn btn-lg btn-primary pull-xs-right"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210322 12:52:05.575" level="INFO">Clicking element 'css=[class="btn btn-lg btn-primary pull-xs-right"]'.</msg>
+<status status="PASS" starttime="20210322 12:52:05.575" endtime="20210322 12:52:09.637"/>
+</kw>
+<kw name="Article Page Should Be Open" library="resource">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Edit Article</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210322 12:52:13.672" level="INFO">Current page contains text 'Edit Article'.</msg>
+<status status="PASS" starttime="20210322 12:52:09.638" endtime="20210322 12:52:13.672"/>
+</kw>
+<status status="PASS" starttime="20210322 12:52:09.638" endtime="20210322 12:52:13.672"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:52:13.672" endtime="20210322 12:52:17.725"/>
+</kw>
+<status status="PASS" starttime="20210322 12:50:58.416" endtime="20210322 12:52:17.726"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210322 12:52:17.728" endtime="20210322 12:52:17.728"/>
+</kw>
+<doc>Tämä on tiedosto, joka sisältää Conduit-websivulle https://gothinkster.github.io/clojurescript-keechma-realworld-example-app/#! suoritettavia testitapauksia.
+Testauksen kohteena ovat sisäänkirjautuminen, uloskirjautuminen ja uuden artikkelin luominen.
+Testit on suunniteltu siten, että jos sivu toimii kuten pitää, ne menevät läpi.
+</doc>
+<status status="PASS" starttime="20210322 12:48:22.743" endtime="20210322 12:52:17.728"/>
+</suite>
+<status status="PASS" starttime="20210322 12:48:22.720" endtime="20210322 12:52:17.731"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="RobotFramework">RobotFramework</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="Tests">RobotFramework.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
